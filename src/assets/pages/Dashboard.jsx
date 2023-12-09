@@ -1,14 +1,14 @@
 // rrd imports
-import { useLoaderData } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 
-//  helper functions
-import { fetchData } from '../../helpers';
+// //  helper functions
+// import { fetchData } from '../../helpers';
 
-// loader
-export function dashboardLoader() {
-  const userName = fetchData("userName");
-  return { userName }
-}
+// // loader
+// export function dashboardLoader() {
+//   const userName = fetchData("userName");
+//   return  userName 
+// }
 
 const Dashboard = () => {
   const { userName } = useLoaderData()
