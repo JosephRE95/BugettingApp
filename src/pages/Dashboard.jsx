@@ -1,7 +1,7 @@
 import React from 'react'
 import { fetchData } from '../helpers'
 import { useLoaderData } from 'react-router-dom'
-
+import Intro from '../components/Intro'
 export function dashBoardLoader(){
     const userName = fetchData("userName")
     return { userName }
@@ -11,11 +11,10 @@ export function dashBoardLoader(){
    const { userName } = useLoaderData()
 
   return (
-    <div>
-        Dashboard
-        <h1>{ userName }</h1>
+    <>
+         {userName ? (<p>{ userName }</p>) : <Intro />}
         
-        </div> 
+        </> 
   )
 }
 export default Dashboard
