@@ -19,22 +19,25 @@ const router = createBrowserRouter([
     loader: mainLoader,
     errorElement: <Error />,
     children: [
-
-  {
-    index: true,
-    element: <Dashboard />,
-    loader: dashboardLoader,
-    action: dashboardAction,
-    errorElement: <Error />,
+      {
+        index: true,
+        element: <Dashboard />,
+        loader: dashboardLoader,
+        action: dashboardAction,
+        errorElement: <Error />,
+      },
+      {
+        path: "logout",
+        action: logOutAction,
+      },
+      {
+        path: "game", // Add this route
+        element: <RockPaperScissors />,
+      },
+    ],
   },
-  {
-    path: "logout",
-    action: logOutAction
-  },
-]
-},
-  
 ]);
+
 
 function App() {
   return (
